@@ -1,7 +1,7 @@
-# CryptoCam
-_Generate pseudo-random values using live camera input._
-***
-### __⚠️ DO NOT USE THE VALUES RETURNED FROM THIS PROGRAM FOR CRYPTOGRAPHIC KEY GENERATION! ⚠️__
+# CryptoCam  
+_Generate pseudo-random values using live camera input._  
+***  
+__⚠️ DO NOT USE THE VALUES RETURNED FROM THIS PROGRAM FOR CRYPTOGRAPHIC KEY GENERATION! ⚠️__  
 ***
 ## About
 CryptoCam is a simple Python program that takes a photo from your computer's primary camera and generates a sha256 checksum from its data. This checksum can then be used for pseudo-random number generation.
@@ -18,17 +18,20 @@ To "install" CryptoCam, first clone this repo to your directory of choice, then 
 ```
 import cryptocam as cc
 
-cc.generateHash("true", "checksum.txt", "capture.png")
+cc.generateHash("true", "checksum.txt", "capture.png", "sha256")
 ```
 
 ## Usage
-- `generateHash(saveToFile, hashPath, photoPath)` - Used to generate the checksum from the photo data.
+- `generateHash(saveToFile, hashPath, photoPath, hashType)` - Used to generate the checksum from the photo data.
   - Arguments:
     - `saveToFile` [`"true"` | `"false"`] - If `"true"`, then saves the checksum value to a file defined in the `hashPath` arg.
     - `hashPath` [string to path] - Defines the save path and filename for the checksum value if `saveToFile` is `"true"`.
       - _Example:_ `generateHash("true", "src/checksum.txt", ...)`
     - `photoPath` [string to path] - Defines the save path and filename for the photo capture. Must end with `.png`. Cannot be blank.
       - _Example:_ `generateHash("true", "src/checksum.txt", "src/capture.png")`
+    - `hashType` [string of type] - Defines the checksum generation algorithm. If not defined, defaults to `sha256`.
+      - _Possible Values:_ ("sha1", "sha256", "sha512", "blake2b", "blake2s", "md5", "sha3_256", "sha3_512")
+      - _Example:_ `generateHash("true", "src/checksum.txt", "src/capture.png", "sha512")`
 
 ## License
 CryptoCam is licensed under the GNU GPLv3 license. To learn more about this license, please reference the full text in the `LICENSE` file at the root of this repository.
