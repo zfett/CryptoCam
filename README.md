@@ -7,7 +7,7 @@ _Generate pseudo-random values using live camera input._
 CryptoCam is a simple Python program that takes a photo from your computer's primary camera and generates a sha256 checksum from its data. This checksum can then be used for pseudo-random number generation.
 
 ## How?
-By using OpenCV for Python and hashlib, CryptoCam takes a photo from your primary camera device and saves it to the path specified in the `PHOTO_PATH` constant as a `.png` file. Next, using hashlib, CryptoCam generates a sha256 checksum from the photo's binary data and saves it to the path specified in the `HASH_PATH` constant, or returns the value without saving a file if you specify the `saveToFile` arg as `"false"` on the `generateHash()` function.
+By using OpenCV for Python and hashlib, CryptoCam takes a photo from your primary camera device and saves it to the path specified in the `photoPath` argument as a `.png` file. Next, using hashlib, CryptoCam generates a sha256 checksum from the photo's binary data and saves it to the path specified in the `hashPath` argument, or returns the value without saving a file if you specify the `saveToFile` arg as `"false"` on the `generateHash()` function.
 
 ## Why?
 I dunno, it's was a fun little sideproject for me! I've always wanted to get a Raspberry Pi for little programming projects but I've never had any ideas what to run on it, now I do!
