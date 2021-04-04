@@ -15,7 +15,7 @@ I dunno, it's was a fun little sideproject for me! I've always wanted to get a R
 ## Installation
 To "install" CryptoCam, first clone this repo to your directory of choice, then make sure to install OpenCV for Python by running `pip3 install opencv-python` on your command line. Once you've installed OpenCV, you then run the program by simply including the module like this:
 
-```
+```python
 import cryptocam as cc
 
 cc.generateHash("true", "checksum.txt", "capture.png", "sha256")
