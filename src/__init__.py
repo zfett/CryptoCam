@@ -1,0 +1,1 @@
+from cryptocam import generateHash
