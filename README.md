@@ -24,12 +24,12 @@ cc.generateHash("true", "checksum.txt", "capture.png", "sha256")
 ## Usage
 - `generateHash(saveToFile, hashPath, photoPath, hashType)` - Used to generate the checksum from the photo data.
   - Arguments:
-    - `saveToFile` [`"true"` | `"false"`] - If `"true"`, then saves the checksum value to a file defined in the `hashPath` arg.
-    - `hashPath` [string to path] - Defines the save path and filename for the checksum value if `saveToFile` is `"true"`.
+    - `saveToFile` (`"true"` || `"false"`) - If `"true"`, then saves the checksum value to a file defined in the `hashPath` arg.
+    - `hashPath` (string to path) - Defines the save path and filename for the checksum value if `saveToFile` is `"true"`.
       - _Example:_ `generateHash("true", "src/checksum.txt", ...)`
-    - `photoPath` [string to path] - Defines the save path and filename for the photo capture. Must end with `.png`. Cannot be blank.
+    - `photoPath` (string to path) - Defines the save path and filename for the photo capture. Must end with `.png`. Cannot be blank.
       - _Example:_ `generateHash("true", "src/checksum.txt", "src/capture.png")`
-    - `hashType` [string of type] - Defines the checksum generation algorithm. If not defined, defaults to `sha256`.
+    - `hashType` (string of type) - Defines the checksum generation algorithm. If not defined, defaults to `sha256`.
       - _Possible Values:_ ("sha1", "sha256", "sha512", "blake2b", "blake2s", "md5", "sha3_256", "sha3_512")
       - _Example:_ `generateHash("true", "src/checksum.txt", "src/capture.png", "sha512")`
 
