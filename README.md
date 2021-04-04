@@ -33,5 +33,8 @@ cc.generateHash("true", "checksum.txt", "capture.png", "sha256")
       - _Possible Values:_ ("sha1", "sha256", "sha512", "blake2b", "blake2s", "md5", "sha3_256", "sha3_512")
       - _Example:_ `generateHash("true", "src/checksum.txt", "src/capture.png", "sha512")`
 
+## Recommendation
+To achieve maximum "entropy," point your camera towards somewhere busy, like an active street, wall of lava lamps, fishtank, etc. This will ensure that the generated checksums can have enough of a difference in their input data between other generated checksums.
+
 ## License
 CryptoCam is licensed under the GNU GPLv3 license. To learn more about this license, please reference the full text in the `LICENSE` file at the root of this repository.
