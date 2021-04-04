@@ -4,6 +4,8 @@ import hashlib
 # --- PRIVATE FUNCTIONS --- #
 
 camCapture = cv2.VideoCapture(0)
+camCapture.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+camCapture.set(cv2.CAP_PROP_FRAME_HEIGHT, 1280)
 
 def _captureFrame(path):
   rev, frame = camCapture.read()
