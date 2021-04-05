@@ -1,8 +1,9 @@
 # CryptoCam  
 _Generate pseudo-random values using live camera input._  
+
 ---
 ⚠️ **DO NOT USE THE VALUES RETURNED FROM THIS PROGRAM FOR CRYPTOGRAPHIC KEY GENERATION!** ⚠️
----
+
 ## About
 CryptoCam is a simple Python program that takes a photo from your computer's primary camera and generates a checksum from its data. This checksum can then be used for pseudo-random number generation.
 
